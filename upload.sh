@@ -7,8 +7,11 @@ git add . --all
 git commit -m "add books"
 git checkout master
 git merge tmp
-git push origin master << EOF
-wolffzheng Wolff8341
-EOF
+(echo "wolffzheng"
+sleep 1
+echo "Wolff8341") | git push origin master
+#git push origin master << EOF
+#wolffzheng Wolff8341
+#EOF
 git branch -d tmp
 
