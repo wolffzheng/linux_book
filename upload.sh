@@ -7,10 +7,8 @@ git add . --all
 git commit -m "add books"
 git checkout master
 git merge tmp
-git push origin master
-expect "Username for \'https://github.com':"
-send "wolffzheng\r"
-expect "Password for \'https://wolffzheng@github.com':"
-send "Wolff8341\r"
+git push origin master << EOF
+wolffzheng Wolff8341
+EOF
 git branch -d tmp
 
